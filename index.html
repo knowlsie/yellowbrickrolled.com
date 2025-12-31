@@ -13,17 +13,37 @@
 
 <body>
 
+    <div id="overlay">
+        <div class="overlay-content">
+            Tap to Enter
+        </div>
+    </div>
+
     <div class="card">
         <h1>Yellow B-Rick Rolled!</h1>
 
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=I9gQE9w_q6FEL-3U&autoplay=1&mute=1"
-                title="YouTube video player" frameborder="0"
+            <iframe id="rick-video" src="" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
         </div>
     </div>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        const videoFrame = document.getElementById('rick-video');
+
+        overlay.addEventListener('click', () => {
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 500); // Wait for transition
+
+            // Load video unmuted
+            videoFrame.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?si=I9gQE9w_q6FEL-3U&autoplay=1&mute=0";
+        });
+    </script>
 
 </body>
 
