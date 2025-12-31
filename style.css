@@ -70,15 +70,27 @@ body {
     transform: translateY(-5px);
 }
 
-h1 {
-    font-size: 3.5rem;
-    color: #fca311;
+.title-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
     margin-top: 0;
     margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.title-stack span {
+    font-size: 5rem;
+    line-height: 1;
+    color: #fca311;
     text-shadow:
-        3px 3px 0px #14213d,
-        6px 6px 0px rgba(0, 0, 0, 0.1);
-    letter-spacing: 1px;
+        4px 4px 0px #14213d,
+        8px 8px 0px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
 }
 
 .video-container {
@@ -111,8 +123,8 @@ h1 {
         border-radius: 20px;
     }
 
-    h1 {
-        font-size: 2rem;
+    .title-stack span {
+        font-size: 3rem;
     }
 
     .overlay-content {
