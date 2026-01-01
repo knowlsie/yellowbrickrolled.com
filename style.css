@@ -70,13 +70,16 @@ body {
     transform: translateY(-5px);
 }
 
+.header-group {
+    margin-bottom: 30px;
+}
+
 .title-stack {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin: 0;
 }
 
 h1 {
@@ -84,13 +87,25 @@ h1 {
 }
 
 .title-stack span {
-    font-size: 5rem;
-    line-height: 1;
+    font-size: 4rem;
+    /* Adjusted for 2 lines */
+    line-height: 1.1;
     color: #fca311;
     text-shadow:
         4px 4px 0px #14213d,
         8px 8px 0px rgba(0, 0, 0, 0.1);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 2rem;
+    /* Bigger */
+    color: #4a3b2a;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-weight: 800;
+    /* Bolder */
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
 }
 
 .video-container {
@@ -124,7 +139,11 @@ h1 {
     }
 
     .title-stack span {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
     }
 
     .overlay-content {
